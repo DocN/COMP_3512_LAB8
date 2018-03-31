@@ -39,7 +39,27 @@ public:
 	}
 
 
+	bool add(const T& t) {
+		if (currentSize == max) {
+			return false;
+		}
+		arrayList[currentSize] = t;
+		currentSize++;
+		return true;
+	}
 
+	T remove(const T& t) {
+		int index = getFirstIndex(t);
+		if (index == -1) {
+			return nullptr;
+		}
+		T temp = arrayList[i];
+		for (int i = index; i < max; i++) {
+			arrayList[i] = arrayList[i + 1];
+		}
+		currentSize--;
+		return temp;
+	}
 
 private:
 	T * arrayList;
