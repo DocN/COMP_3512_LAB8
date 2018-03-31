@@ -21,6 +21,23 @@ public:
 	T& operator[] (usigned int index) {
 		return arrayList[index];
 	}
+	int getFirstIndex(const T& t) const {
+		for (int i = 0; i < currentSize; i++) {
+			if (arrayList[i] == t) {
+				return i;
+			}
+		}
+		return -1;
+	}
+
+	size_t size() const {
+		return currentSize;
+	}
+
+	size_t capacity() const {
+		return max;
+	}
+
 
 
 
