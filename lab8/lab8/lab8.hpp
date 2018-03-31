@@ -14,6 +14,14 @@ public:
 		delete arrayList;
 	}
 
+	const T& get(unsigned int index) const {
+		return arrayList[index];
+	}
+
+	T& operator[] (usigned int index) {
+		return arrayList[index];
+	}
+
 
 
 private:
